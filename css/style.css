@@ -1,0 +1,540 @@
+@charset "utf-8";
+
+html{
+    font-size: 16px;
+}
+
+body{
+    color:#222222;
+    font-family: "Open Sans", "游ゴシック";
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.wrap{
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* header */
+.header_title{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 121px;
+    align-items: center;
+}
+
+.header_item{
+    font-size: 21px;
+    display: flex;
+}
+
+.header_contents{
+    margin: 0 0 0 50px;
+}
+
+.letter_black{
+    color: black;
+}
+
+/* hero image */
+.hero_image{
+    position: relative;
+}
+.title_position{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    color: white;
+}
+
+.title_site{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 60px;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 30px;
+}
+
+.title_sub {
+    font-size: 28px
+}
+
+/* about */
+.text{
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.text_title{
+    margin: 0 0 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd61a;
+}
+
+.text_eyecatch{
+    margin: 0 0 60px;
+    font-size: 18px;
+}
+
+.text_name{
+    margin: 0 0 40px;
+}
+
+.text_paragraph{
+    margin: 40px 0 0;
+    line-height: 1.75;
+}
+
+.text_add{
+    margin-bottom: 80px;
+}
+
+.text_photo{
+    display: flex
+}
+
+/* 画像のアニメーション挿入 */
+    /* loop_wrap */
+    .loop_wrap {
+        display: flex;
+        width: 240vw;
+    }
+    
+    .loop_wrap img {
+        width: auto;
+        height: auto;
+    }
+
+    @keyframes loop {
+        0% {
+        transform: translateX(100%);
+        }
+        to {
+        transform: translateX(-100%);
+        }
+    }
+    
+    @keyframes loop2 {
+        0% {
+        transform: translateX(0);
+        }
+        to {
+        transform: translateX(-200%);
+        }
+    }
+    .loop_wrap img:first-child {
+        animation: loop 50s -25s linear infinite;
+    }
+    
+    .loop_wrap img:last-child {
+        animation: loop2 50s linear infinite;
+    }
+
+/* course */
+.course_letter{
+    color: black;
+}
+
+.course_top{
+    margin: 0 0 60px;
+    line-height: 1.75;
+}
+
+.course_main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fafafa;
+}
+
+.course_left{
+    width: 600px;
+}
+
+.course_right{
+    width: 600px;
+}
+
+.course_middle{
+    width: 480px;
+    text-align: left;
+    padding: 100px 0 0 50px;
+}
+
+.course_middle_modify{
+    width: 480px;
+    text-align: left;
+    margin: 100px 0 0 120px;
+}
+
+.course_title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 40px;
+}
+
+.course_sentence{
+    line-height: 1.75;
+}
+
+/* news */
+.works{
+    max-width: 990px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.works_middle{
+    display: flex;
+    padding: 60px 0;
+
+}
+.works_fine{
+    width: 33.333%;
+    margin: 0 15px 0;
+}
+
+.works_fine:hover{
+    opacity: 0.6;
+    cursor: pointer;
+    transform: translate(0, -5px);
+}
+
+.works_eyecatch{
+    margin: 0 0 30px;
+}
+
+.works_contents{
+    margin: 0 0 24px;
+}
+
+.works_item{
+    line-height: 1.75;
+    text-align: justify;
+}
+
+.btn{
+    display: block;
+    width: 300px;
+    margin: auto;
+    padding: 21px 0;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+      to right,
+      #000000 0%,
+      #000000 50%,
+      #ffd61a 50%,
+      #ffd61a 100%
+    );
+    box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+    transition: background-position ease 0.4s;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-position: 0 0;
+}
+
+/* access */
+.access{
+    background-color: #fafafa;
+    padding: 60px 0;
+}
+
+.access_header{
+    margin: 0 0 60px;
+}
+
+
+.iframe-wrap{
+    margin: 0 0 60px;
+}
+
+.access_main{
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.access_left{
+    width: 150px;
+    height: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.access_right{
+    width: 350px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+/* contact */
+.form_wrapper{
+    width: 640px;
+    margin: auto;
+}
+
+.contact{
+    padding: 60px 0 140px;
+}
+
+.contact_title{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 30px;
+}
+
+.contact_main{
+    margin: 0 0 60px;
+}
+
+.contact_first{
+    margin: 0 0 60px;
+    line-height: 1.75;  
+}
+
+.contact_second{
+    margin: 0 0 70px;
+    line-height: 1.75;  
+}
+
+.form_inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 30px;
+}
+
+.form_title{
+    width: 240px;
+    padding: 8px 64px 0 16px;
+    text-align: left;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    border-left: transparent;
+    border-bottom: transparent;
+}
+
+.form_adjust{
+    border-top: 1px solid #bfbfbf;
+}
+
+.form_adjust_sub{
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.form_item{
+    width: 392px;
+    margin: 8px 0 8px 8px;
+    text-align: left;
+}
+
+.form_select{
+    margin: 0 0 24px;
+}
+
+/* その他 *//** selectboxの初期化 **/
+select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form_example{
+    width: 392px;
+    height: 36px;
+    margin: 8px 8px 8px 0;
+    border: solid 1px #bfbfbf;
+    text-align: left;
+}
+
+.form_parts{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid 1px #bfbfbf;
+    font-size: 24px;
+}
+
+.form_label{
+    font-size: 85%;
+}
+
+input[type*="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0 36px 0 0;
+    border: solid 1px #e6e3e3;
+    border-radius: 25%;
+    background-color: #e6e3e3;
+    vertical-align: -4px;
+}
+
+input[type*="checkbox"]:checked{
+    background-color: #a0a0a0;
+}
+
+.btn_submit{
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    line-height: 1px;
+}
+
+/* footer */
+.footer{
+    position: relative;
+    height: 76px;
+    background-color: #707070;
+}
+
+/* その他 *//** pageup iconの挿入 **/
+.btn-pagetop{
+    position: absolute;
+    top: -68px;
+    right: 0;
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #707070;
+}
+
+.footer{
+    height: 72px;
+    padding: 24px,0;
+    background-color: #707070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.copyrights{
+    color: white;
+}
+
+.icon-up{
+    color: #fff;
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+/*title animation用*/
+.title_site span {
+    display: block;
+    transform: translate(0, 105%);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+
+.title_site.-visible span {
+    transform: translate(0, 0);
+}
+  
+.title_site span:nth-child(2) {
+    transition-delay: 0.06s;
+}
+.title_site span:nth-child(3) {
+    transition-delay: 0.12s;
+}
+.title_site span:nth-child(4) {
+    transition-delay: 0.18s;
+}
+.title_site span:nth-child(5) {
+    transition-delay: 0.24s;
+}
+.title_site span:nth-child(6) {
+    transition-delay: 0.30s;
+}
+.title_site span:nth-child(7) {
+    transition-delay: 0.36s;
+}
+.title_site span:nth-child(8) {
+    transition-delay: 0.42s;
+}
+.title_site span:nth-child(9) {
+    transition-delay: 0.48s;
+}
+.title_site span:nth-child(10) {
+    transition-delay: 0.54s;
+}
+.title_site span:nth-child(11) {
+    transition-delay: 0.6s;
+}
+.title_site span:nth-child(12) {
+    transition-delay: 0.66s;
+}
+.title_site span:nth-child(13) {
+    transition-delay: 0.72s;
+}
+.title_site span:nth-child(14) {
+    transition-delay: 0.78s;
+}
+
+/*Javascript用*/
+.course_sentence{
+	opacity : 0;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateY(30px);
+}
+
+.course_title{
+	opacity : 0;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateY(30px);
+}
+
+.course_photo{
+	opacity : 0;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateX(-30px);
+}
+
+
+.course_photo_sub{
+	opacity : 0;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateX(30px);
+}
+
+/*Javascript用アニメーション*/
+.active{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+/* ----分からなかったこと---- */
+/* フォーム記入時の文字サイズの変更 */
